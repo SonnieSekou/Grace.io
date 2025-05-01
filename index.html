@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Boutique - Online Clothing Store</title>
+    <meta name="description" content="Discover the latest fashion trends at Grace Online Clothing Boutique">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* (Keep all previous CSS styles from your index.html) */
+
+        /* New SPA Navigation Styles */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Same as before) -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <div class="logo-icon">
+                    <i class="fas fa-ribbon"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Grace</span>
+                    <span class="logo-sub">Clothing Boutique</span>
+                </div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Shop</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="icons">
+                <a href="#" onclick="showPage('search')"><i class="fas fa-search"></i></a>
+                <a href="#" onclick="showPage('account')"><i class="fas fa-user"></i></a>
+                <a href="#" onclick="showPage('wishlist')"><i class="fas fa-heart"></i></a>
+                <a href="#" onclick="showPage('cart')"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pages Container -->
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <!-- (Your existing hero, categories, products, newsletter sections) -->
+            <section class="hero">
+                <!-- ... (keep all hero content) ... -->
+            </section>
+            
+            <section class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <!-- ... (keep categories content) ... -->
+            </section>
+            
+            <!-- ... (keep all other home sections) ... -->
+        </div>
+
+        <!-- Shop Page -->
+        <div id="shop" class="page">
+            <section class="container" style="padding: 80px 20px;">
+                <h2 class="section-title">Our Collection</h2>
+                <div class="products">
+                    <!-- Product 1 -->
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Floral Summer Dress">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Floral Summer Dress</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="product-price">$49.99</p>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                    </div>
+                    
+                    <!-- (Add all other products here) -->
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <section class="container" style="padding: 80px 20px;">
+                <h2 class="section-title">Our Story</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p style="margin-bottom: 20px; font-size: 18px;">
+                        Grace Boutique was founded in 2023 with a passion for bringing elegant, 
+                        affordable fashion to women in Cameroon and beyond. Our curated collections 
+                        blend modern trends with timeless style.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                        <div>
+                            <h3 style="margin-bottom: 15px; color: var(--primary-color);">Our Mission</h3>
+                            <p>To empower women through fashion that combines quality, affordability, and sophistication.</p>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 15px; color: var(--primary-color);">Location</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Ngaoundere Dang, Cameroon</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="container" style="padding: 80px 20px;">
+                <h2 class="section-title">Get In Touch</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px;">
+                    <div>
+                        <h3 style="margin-bottom: 20px;">Contact Information</h3>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-envelope"></i> sonniesekoujr@gmail.com
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-map-marker-alt"></i> Cameroon, Ngaoundere Dang
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-phone"></i> +237 650 760 516
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fab fa-whatsapp"></i> +231 881 195 769
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Same as before) -->
+    <footer>
+        <!-- (Keep your existing footer) -->
+    </footer>
+
+    <!-- JavaScript for Page Navigation -->
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Update URL (optional)
+            history.pushState(null, null, `#${pageId}`);
+        }
+
+        // Show home page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash) {
+                showPage(window.location.hash.substring(1));
+            } else {
+                showPage('home');
+            }
+        });
+    </script>
+</body>
+</html>
